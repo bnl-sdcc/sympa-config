@@ -15,14 +15,13 @@ manpage_directory = /usr/share/man
 sample_directory = /usr/share/doc/postfix-2.10.1/samples
 readme_directory = /usr/share/doc/postfix-2.10.1/README_FILES
 
-
 # Service config
 myhostname = lists.sdcc.bnl.gov
 mydomain = sdcc.bnl.gov
-mail_owner = postfix
-inet_interfaces = localhost
-inet_protocols = all
-mydestination = $myhostname, localhost.$mydomain, localhost, $mydomain, lists.sdcc.bnl.gov
+
+mydestination = $myhostname, localhost.$mydomain, localhost, lists.sdcc.bnl.gov
+relay_domains = $mydestination
+
 unknown_local_recipient_reject_code = 550
 
 alias_maps = hash:/etc/aliases,
@@ -33,6 +32,9 @@ alias_database = hash:/etc/aliases,
 				 hash:/etc/sympa/aliases.sympa.postfix
 
 recipient_delimiter = +
+mail_owner = postfix
+inet_interfaces = localhost
+inet_protocols = all
 
 
 # Debug config
