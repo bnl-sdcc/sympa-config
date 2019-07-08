@@ -8,6 +8,8 @@ cd /etc/postfix
 wget $GITRAW/etc/main.cf -O main.cf
 cd -
 
+./postfix-restart.sh
+
 
 
 
