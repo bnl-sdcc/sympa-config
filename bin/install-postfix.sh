@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-GITRAW="http://git.racf.bnl.gov/gitea/jhover/sympa-config/raw/branch/master"
+GITRAW="https://raw.githubusercontent.com/bnl-sdcc/sympa-config/master"
 
 echo "Installing/confirming postfix"
 yum install postfix 
