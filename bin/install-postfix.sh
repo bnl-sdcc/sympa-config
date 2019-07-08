@@ -1,16 +1,14 @@
 #!/bin/bash -e
+#
+# Install postfix local only. 
+
 
 GITRAW="https://raw.githubusercontent.com/bnl-sdcc/sympa-config/master"
 
 echo "Installing/confirming postfix"
 yum install postfix 
-cd /etc/postfix
-wget $GITRAW/etc/main.cf -O main.cf
-cd -
+wget -q $GITRAW/etc/main.cf -O /etc/postfix/main.cf
 
 bin/postfix-restart.sh
-
-
-
 
 

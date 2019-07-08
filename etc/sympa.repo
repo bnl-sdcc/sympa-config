@@ -1,0 +1,5 @@
+[sympa-ja.org]
+name=RHEL$releasever - Sympa - stable
+baseurl=http://Sympa-JA.org/download/rhel/$releasever/stable/$basearch/
+gpgcheck=1
+gpgkey=http://Sympa-JA.org/download/RPM-GPG-KEY-sympa-ja_org

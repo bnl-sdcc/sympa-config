@@ -1,0 +1,11 @@
+# Robot aliases for Sympa.
+sympa:                 "| /usr/libexec/sympa/queue sympa@lists.sdcc.bnl.gov"
+listmaster:            "| /usr/libexec/sympa/queue listmaster@lists.sdcc.bnl.gov"
+bounce:                "| /usr/libexec/sympa/bouncequeue sympa@lists.sdcc.bnl.gov"
+abuse-feedback-report: "| /usr/libexec/sympa/bouncequeue sympa@lists.sdcc.bnl.gov"
+sympa-request:         postmaster
+sympa-owner:           postmaster
+#listserv:             sympa
+#listserv-request:     sympa-request
+#majordomo:            sympa
+#listserv-owner:       sympa-owner
