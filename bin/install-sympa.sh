@@ -42,10 +42,10 @@ postalias hash:/etc/sympa/aliases.sympa.postfix
 
 service postfix restart
 
-
-
 echo "Installing/confirming sympa www..."
 
 yum install sympa-httpd mhonarc spawn-fcgi
+wget -q $GITRAW/etc/httpd-sympa.conf -O /etc/httpd/conf.d/sympa.conf
+wget -q $GITRAW/etc/sympa.sysconfig -O /etc/sysconfig/sympa
 
-
+service httpd restart
