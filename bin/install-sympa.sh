@@ -14,6 +14,7 @@ touch /var/lib/sympa/sympa.sqlite
 chown sympa:sympa /var/lib/sympa/sympa.sqlite
 
 wget -q $GITRAW/etc/sympa.conf -O /etc/sympa/sympa.conf
+chown sympa:sympa /etc/sympa/sympa.conf
 
 wget -q $GITRAW/etc/aliases.sympa.postfix -O /etc/sympa/aliases.sympa.postfix
 
