@@ -34,6 +34,12 @@ sympa.pl --health_check
 systemctl enable sympa.service
 service sympa restart
 
+postmap /etc/postfix/virtual
+postmap /etc/postfix/transport
+postalias hash:/etc/sympa/aliases.sympa.postfix
+
+service postfix restart
+
 
 
 echo "Installing/confirming sympa www..."

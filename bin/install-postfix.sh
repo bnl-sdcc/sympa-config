@@ -9,6 +9,10 @@ echo "Installing/confirming postfix"
 yum install postfix 
 wget -q $GITRAW/etc/main.cf -O /etc/postfix/main.cf
 
-bin/postfix-restart.sh
+postmap /etc/postfix/virtual
+postmap /etc/postfix/transport
+postalias hash:/etc/sympa/aliases.sympa.postfix
+
+service postfix restart
 
 
