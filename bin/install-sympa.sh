@@ -18,12 +18,14 @@ chown sympa:sympa /etc/sympa/sympa.conf
 
 wget -q $GITRAW/etc/aliases.sympa.postfix -O /etc/sympa/aliases.sympa.postfix
 
-
+touch /etc/sympa/aliases.sympa.postfix.db
 chown sympa:sympa /etc/sympa/aliases.sympa.postfix.db
 sudo -u sympa postalias hash:/etc/sympa/aliases.sympa.postfix
 postalias hash:/etc/sympa/aliases.sympa.postfix
 
 touch /etc/sympa/aliases.sympa.sendmail
+touch /etc/sympa/aliases.sympa.sendmail.db
+chown sympa:sympa /etc/sympa/aliases.sympa.sendmail.db
 chmod 640 /etc/sympa/aliases.sympa.sendmail
 chown sympa:sympa /etc/sympa/aliases.sympa.sendmail
 
