@@ -1,2 +1,3 @@
 # sympa-config
-Utilities and config for Sympa
+
+Config and utilities for install and maintenance of Sympa.
