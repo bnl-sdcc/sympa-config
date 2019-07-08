@@ -48,4 +48,8 @@ yum install sympa-httpd mhonarc spawn-fcgi
 wget -q $GITRAW/etc/httpd-sympa.conf -O /etc/httpd/conf.d/sympa.conf
 wget -q $GITRAW/etc/sympa.sysconfig -O /etc/sysconfig/sympa
 
+systemctl enable wwsympa.service
+systemctl start wwsympa.service
+systemctl status wwsympa.service
+
 service httpd restart
