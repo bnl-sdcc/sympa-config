@@ -8,7 +8,7 @@ GITRAW="https://raw.githubusercontent.com/bnl-sdcc/sympa-config/master"
 
 echo "Installing/confirming sympa core..."
 wget -q $GITRAW/etc/sympa.repo -O /etc/yum.repos.d/sympa.repo
-yum install sympa 
+yum install sympa sqlite mariadb-server perl-DBD-MySQL perl-DBD-SQLite
 
 touch /var/lib/sympa/sympa.sqlite
 chown sympa:sympa /var/lib/sympa/sympa.sqlite
@@ -47,6 +47,10 @@ echo "Installing/confirming sympa www..."
 yum install sympa-httpd mhonarc spawn-fcgi
 wget -q $GITRAW/etc/httpd-sympa.conf -O /etc/httpd/conf.d/sympa.conf
 wget -q $GITRAW/etc/sympa.sysconfig -O /etc/sysconfig/sympa
+
+touch /var/log/sympa.log
+chmod 640 /var/log/sympa.log
+
 
 systemctl enable wwsympa.service
 systemctl start wwsympa.service

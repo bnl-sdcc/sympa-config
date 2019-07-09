@@ -18,6 +18,7 @@ readme_directory = /usr/share/doc/postfix-2.10.1/README_FILES
 # Service config
 myhostname = lists.sdcc.bnl.gov
 mydomain = sdcc.bnl.gov
+relayhost = adminmail.rcf.bnl.gov
 
 mydestination = $myhostname, localhost.$mydomain, localhost, lists.sdcc.bnl.gov
 relay_domains = $mydestination
